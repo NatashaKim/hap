@@ -21,6 +21,11 @@
 <h2>Votes</h2>
 <%= render @event.votes %>
 
-<% if user_signed_in? %>
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<% end %>
+<!-- <#% if user_signed_in? %>
+<#%= link_to 'Edit', edit_event_path(@event) %> |
+<#% end %> -->
+
+<div> 
+  <%= link_to 'Edit', edit_event_path(@event) if can? :update, @event %> 
+  <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, @event %> 
+</div>

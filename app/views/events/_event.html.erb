@@ -1,0 +1,11 @@
+<div>
+ <h2><%= link_to event.name, event %></h2>
+<div class="">
+<%= event.user_id %>
+</div>
+ <p><%= event.is_official %></p>
+  <div> 
+    <%= link_to 'Edit', edit_event_path(event) if can? :update, event %> 
+    <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, event %> 
+  </div>  
+</div>

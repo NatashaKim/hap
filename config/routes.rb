@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'events/index'
-  root 'events#index'
+  get 'users/index'
   get 'users/:id' => 'users#show', :as => :user
+
+  get 'promo', to: 'promo#index'
+  root 'promo#index'
 
   resources :events do
   	resources :votes
