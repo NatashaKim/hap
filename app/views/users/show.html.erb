@@ -1,0 +1,6 @@
+<% if user_signed_in? && @user.id == current_user.id %>
+	<p><%= link_to 'Edit profile', edit_user_registration_path %></p>
+<% end %>
+<p>ID <%= @user.id %></p>
+<p>Email <%= @user.email %></p>
+<p>Username <%= @user.username %></p>

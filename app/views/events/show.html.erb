@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Is official:</strong>
+  <%= @event.is_official %>
+</p>
+
+<h2>Add a vote:</h2>
+
+<% if user_signed_in? %>
+<%= render "votes/form" %>
+<% else %>
+<p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to votes.</p>
+<% end %>
+
+<h2>Votes</h2>
+<%= render @event.votes %>
+
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>

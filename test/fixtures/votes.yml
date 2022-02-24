@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_slot: false
+  date: 2022-02-24 18:56:18
+  slot_start: 2022-02-24 18:56:18
+  slot_end: 2022-02-24 18:56:18
+  temp_user_id: 1
+  temp_user_token: MyString
+  temp_user_name: MyString
+  event: one
+
+two:
+  is_slot: false
+  date: 2022-02-24 18:56:18
+  slot_start: 2022-02-24 18:56:18
+  slot_end: 2022-02-24 18:56:18
+  temp_user_id: 1
+  temp_user_token: MyString
+  temp_user_name: MyString
+  event: two

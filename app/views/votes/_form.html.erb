@@ -1,0 +1,20 @@
+<%= form_for([@event, @event.votes.build]) do |f| %>
+  <div class="field">
+    <%= current_user.email %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :slot_start %><br />
+    <%= f.text_field :slot_start %>
+  </div>
+	<div class="field">
+		<%= f.label :slot_end %><br />
+		<%= f.text_field :slot_end %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

@@ -1,0 +1,29 @@
+<% if vote.user_id? %>
+<p>
+  <b>Vote:</b>
+  <%= User.find(vote.user_id).email %>
+</p>
+<% end %>
+
+<p>
+  <b>vote:</b>
+  <%= vote.date %>
+</p>
+<p>
+  <b>slot start:</b>
+  <%= vote.slot_start %>
+</p>
+<p>
+  <b>slot end:</b>
+  <%= vote.slot_end %>
+</p>
+
+
+
+<% if user_signed_in? && current_user.id == vote.user_id  %>
+<p>
+  <%= link_to 'Destroy Vote', [vote.event, vote],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
+<% end %>
